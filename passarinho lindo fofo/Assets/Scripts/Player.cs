@@ -5,12 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     const float jumpForce = 8;
-    Rigidbody2D rb2D;
+    Rigidbody2D rigidbody2D;
     UIManager managerUI;
 
     private void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
         managerUI = FindObjectOfType<UIManager>();
     }
 
@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            rb2D.velocity = Vector3.zero;
-            rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rigidbody2D.velocity = Vector3.zero;
+            rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 

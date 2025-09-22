@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     #region Singleton
     public static GameManager instance;
+    public int score = 0;
+    public TextMeshProUGUI scoreText;
+    public GameObject gameOverPanel;
+
+    private bool isGameOver = false;
+
 
     private void Awake()
     {
@@ -22,8 +29,25 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+  
+    public void AddPoint()
+    {
+        if (isGameOver) return;
+
+        score++;
+        scoreText.text = "Score: " + score;
+    }
+
+    public void GameOver()
+    {
+        if (isGameOver) return;
+
+        isGameOver = true;
+        Time.timeScale = 0f;
+        gameOverPanel.SetActive(true);
+    }
+
     Vector2 screenBounds;
-    int score;
 
     public Vector2 ScreenBounds { get => screenBounds; }
     public int Score { get => score; set => score = value; }

@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - passaro
+  - score
+  - obstacle
+  - GameManager
+  - UIManager
   layers:
   - Default
   - TransparentFX
