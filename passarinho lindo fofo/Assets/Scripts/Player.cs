@@ -7,11 +7,13 @@ public class Player : MonoBehaviour
     const float jumpForce = 8;
     Rigidbody2D rigidbody2D;
     UIManager managerUI;
+    public GameObject gameOverPanel;
 
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         managerUI = FindObjectOfType<UIManager>();
+        gameOverPanel.SetActive(false);
     }
 
     private void Update()
@@ -38,6 +40,8 @@ public class Player : MonoBehaviour
 
     void GameOver()
     {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
 
         if (PlayerPrefs.GetInt("Record") < GameManager.instance.Score)
         {
@@ -47,4 +51,3 @@ public class Player : MonoBehaviour
 
     }
 }
-

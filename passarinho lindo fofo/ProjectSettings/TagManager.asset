@@ -9,6 +9,7 @@ TagManager:
   - obstacle
   - GameManager
   - UIManager
+  - Obstacle
   layers:
   - Default
   - TransparentFX

@@ -1822,6 +1822,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4029624978543866555, guid: cc41b9154a5791f4b84c5d6c3d4857db, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 489448569}
     - target: {fileID: 4994822246565326437, guid: cc41b9154a5791f4b84c5d6c3d4857db, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1840,7 +1844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061295934311221287, guid: cc41b9154a5791f4b84c5d6c3d4857db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.04
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 9061295934311221287, guid: cc41b9154a5791f4b84c5d6c3d4857db, type: 3}
       propertyPath: m_LocalPosition.y
