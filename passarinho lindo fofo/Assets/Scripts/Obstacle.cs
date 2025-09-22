@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Obstacles : MonoBehaviour
 {
-    public float speed = 3.5f;
-
-    Rigidbody2D rB;
+    float speed = 3.5f;
+    Rigidbody2D rigidbody2D;
 
     private void Start()
     {
-        rB = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -21,6 +20,6 @@ public class Obstacles : MonoBehaviour
             Destroy(gameObject);
         }
 
-        rB.velocity = Vector2.left * speed;
+        rigidbody2D.velocity = Vector2.left * speed;
     }
 }
